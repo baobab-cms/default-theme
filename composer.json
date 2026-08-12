@@ -1,0 +1,21 @@
+{
+    "name": "baobab/default-theme",
+    "description": "Baobab CMS default theme — the reference implementation of the theme contract.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "cms",
+        "laravel",
+        "baobab",
+        "theme"
+    ],
+    "require": {
+        "php": "^8.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Baobab\\DefaultTheme\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}

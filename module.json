@@ -1,0 +1,28 @@
+{
+    "name": "baobab/default-theme",
+    "title": "Baobab",
+    "description": "Thème par défaut de Baobab — sobre, typographique, sans JavaScript côté public. Il sert aussi de référence de conformité au contrat de thème.",
+    "version": "1.0.0",
+    "type": "theme",
+    "provider": "Baobab\\DefaultTheme\\Providers\\DefaultThemeServiceProvider",
+    "autoload": {
+        "psr-4": {
+            "Baobab\\DefaultTheme\\": "src/"
+        }
+    },
+    "theme": {
+        "parent": null,
+        "screenshot": "screenshot.png",
+        "menus": {
+            "primary": "Navigation principale",
+            "footer": "Pied de page"
+        },
+        "widget_zones": {
+            "sidebar": "Barre latérale",
+            "footer": "Pied de page"
+        },
+        "supports": [
+            "search"
+        ]
+    }
+}

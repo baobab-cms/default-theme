@@ -1,0 +1,11 @@
+{
+  "resources/assets/css/app.css": {
+    "file": "assets/app-LGcNaVj_.css",
+    "name": "app",
+    "names": [
+      "app.css"
+    ],
+    "src": "resources/assets/css/app.css",
+    "isEntry": true
+  }
+}
