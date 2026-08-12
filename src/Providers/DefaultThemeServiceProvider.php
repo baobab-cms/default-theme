@@ -52,7 +52,9 @@ final class DefaultThemeServiceProvider extends ServiceProvider
      */
     private function composeSiteIdentity(): void
     {
-        ViewFacade::composer('theme::partials.header', function (View $view): void {
+        // `home` en a besoin autant que l'en-tête : son héros porte le nom du
+        // site, seul contenu dont le mode par défaut dispose (§5.3).
+        ViewFacade::composer(['theme::partials.header', 'theme::templates.home'], function (View $view): void {
             $branding = BrandingSetting::current();
 
             $view->with([

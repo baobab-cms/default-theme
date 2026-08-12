@@ -31,8 +31,23 @@ return [
     'search_empty_title' => 'Aucun résultat pour « :query »',
     'search_empty_hint' => 'Essayez un terme plus court, ou une autre orthographe.',
 
+    // --- Accueil ------------------------------------------------------------
+    'home_hero_body' => "Ce site est prêt. Publiez un premier contenu, puis choisissez ce que l'accueil doit montrer dans Réglages > Lecture.",
+    'home_hero_action' => 'Parcourir le site',
+
+    // --- Fiches et listes ---------------------------------------------------
+    'pagination_label' => 'Pagination',
+    'pagination_previous' => 'Précédent',
+    'pagination_next' => 'Suivant',
+    'pagination_go_to' => 'Page :page',
+
+    // --- Page introuvable ---------------------------------------------------
+    'not_found_title' => 'Cette page n’existe pas',
+    'not_found_body' => "L'adresse demandée ne correspond à aucun contenu. Elle a peut-être changé, ou le contenu a été retiré.",
+
     // --- États vides --------------------------------------------------------
     'nothing_here_title' => 'Rien à afficher pour le moment',
     'nothing_here_body' => "Ce site n'a pas encore de contenu publié.",
+    'archive_empty' => 'Aucun contenu publié dans cette rubrique pour le moment.',
 
 ];

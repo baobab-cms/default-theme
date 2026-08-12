@@ -35,7 +35,7 @@
                 </ul>
 
                 <div class="mt-lg">
-                    {{ $entries->links() }}
+                    {{ $entries->links('theme::pagination.numbered') }}
                 </div>
             @else
                 {{-- Un vide de contenu parle (§5.9) : il invite à agir. --}}

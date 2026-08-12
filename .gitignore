@@ -1,0 +1,5 @@
+# Outillage du mainteneur du thème (§3.1, §8.1) : les dépendances de build ne
+# voyagent pas avec le package. `public/build/` en revanche est versionné —
+# c'est l'artefact que l'installation consomme, et §8.1 promet une installation
+# sans Node.
+node_modules/

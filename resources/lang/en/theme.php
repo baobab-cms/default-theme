@@ -30,8 +30,23 @@ return [
     'search_empty_title' => 'No result for “:query”',
     'search_empty_hint' => 'Try a shorter term, or a different spelling.',
 
+    // --- Home -----------------------------------------------------------------
+    'home_hero_body' => 'This site is ready. Publish your first content, then choose what the homepage should show in Settings > Reading.',
+    'home_hero_action' => 'Browse the site',
+
+    // --- Entries and lists ----------------------------------------------------
+    'pagination_label' => 'Pagination',
+    'pagination_previous' => 'Previous',
+    'pagination_next' => 'Next',
+    'pagination_go_to' => 'Page :page',
+
+    // --- Not found ------------------------------------------------------------
+    'not_found_title' => 'This page does not exist',
+    'not_found_body' => 'The requested address matches no content. It may have changed, or the content may have been removed.',
+
     // --- Empty states ---------------------------------------------------------
     'nothing_here_title' => 'Nothing to show yet',
     'nothing_here_body' => 'This site has no published content yet.',
+    'archive_empty' => 'No published content in this section yet.',
 
 ];
