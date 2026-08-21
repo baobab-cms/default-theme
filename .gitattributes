@@ -1,0 +1,7 @@
+# Ce qui ne doit pas voyager dans une distribution du thème.
+# Même raison qu'au paquet `baobab/core` : `export-ignore` sert à la fois le
+# script d'archive (spec 15 §2.1) et les téléchargements « dist » de Composer.
+
+/tests               export-ignore
+/.gitignore          export-ignore
+/.gitattributes      export-ignore
