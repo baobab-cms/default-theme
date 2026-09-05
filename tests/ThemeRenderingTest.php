@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Baobab\DefaultTheme\Providers\DefaultThemeServiceProvider;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\View;
@@ -62,6 +63,32 @@ it('renders the homepage hero on the default reading mode', function () {
 
     expect($html)->toContain(e(__('theme::theme.home_hero_body')))
         ->and($html)->toContain(e(__('theme::theme.home_hero_action')));
+});
+
+/**
+ * Régression — `@elseisset` n'est pas une directive Blade réelle (ni un
+ * mot-clé natif, ni enregistrée nulle part dans le dépôt) : elle survivait à
+ * la compilation comme texte littéral, ce qui laissait les deux `@include`
+ * dans la MÊME branche compilée (`if(isset($entry))`) au lieu de s'exclure.
+ * Toute page en mode « page statique » incluait donc aussi `entry-list` avec
+ * `$entries` non défini, et `count(null)` y est une `TypeError` depuis
+ * PHP 8 — reproduit en recette sur hébergement mutualisé réel le
+ * 4 septembre 2026 (suivi n° 256), jamais vu ici parce qu'aucun test
+ * n'avait encore rendu ce template avec `$entry` renseigné. Corrigé en
+ * `@if`/`@elseif`/`@else`, seule forme où Blade exclut vraiment les branches.
+ */
+it('renders only the static-page branch when an entry is set, never entry-list too', function () {
+    $entry = new class extends Model
+    {
+        protected $guarded = [];
+    };
+    $entry->forceFill(['title' => 'Bienvenue', 'published_at' => null]);
+
+    $html = view('theme::templates.home', ['entry' => $entry, 'title' => 'Bienvenue'])->render();
+
+    expect($html)->toContain('Bienvenue')
+        ->and($html)->not->toContain('elseisset')
+        ->and($html)->not->toContain(e(__('theme::theme.archive_empty')));
 });
 
 it('renders the not found page without excuse, with a way out', function () {

@@ -16,10 +16,10 @@
 @extends('theme::layouts.app')
 
 @section('content')
-    @isset($entry)
+    @if (isset($entry))
         {{-- Mode « page statique » : le réglage a désigné une entrée. --}}
         @include('theme::partials.entry', ['showMeta' => false, 'showTaxonomies' => false])
-    @elseisset($entries)
+    @elseif (isset($entries))
         {{-- Mode « derniers contenus ». --}}
         @include('theme::partials.entry-list', ['heading' => $title])
     @else
@@ -37,5 +37,5 @@
                 {{ __('theme::theme.home_hero_action') }}
             </a>
         </div>
-    @endisset
+    @endif
 @endsection
