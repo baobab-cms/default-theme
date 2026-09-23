@@ -31,6 +31,16 @@ return [
     'search_empty_title' => 'Aucun résultat pour « :query »',
     'search_empty_hint' => 'Essayez un terme plus court, ou une autre orthographe.',
 
+    // --- Consentement aux cookies (spec 16 §3.2) ------------------------------
+    'cookie_banner_title' => 'Cookies',
+    'cookie_banner_intro' => "Ce site utilise des cookies nécessaires à son fonctionnement et, avec votre accord, d'autres cookies pour les usages ci-dessous. Vous pouvez changer d'avis à tout moment.",
+    'cookie_banner_accept_all' => 'Tout accepter',
+    'cookie_banner_reject_all' => 'Tout refuser',
+    'cookie_banner_customize' => 'Personnaliser',
+    'cookie_banner_save' => 'Enregistrer mes choix',
+    'cookie_banner_always_active' => 'toujours actifs',
+    'cookie_banner_manage' => 'Gérer les cookies',
+
     // --- Accueil ------------------------------------------------------------
     'home_hero_body' => "Ce site est prêt. Publiez un premier contenu, puis choisissez ce que l'accueil doit montrer dans Réglages > Lecture.",
     'home_hero_action' => 'Parcourir le site',

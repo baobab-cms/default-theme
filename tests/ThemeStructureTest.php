@@ -56,7 +56,7 @@ it('declares in its manifest exactly what it supports', function () {
     $manifest = json_decode((string) File::get(themePath('module.json')), associative: true);
 
     expect($manifest['type'])->toBe('theme')
-        ->and($manifest['theme']['supports'])->toBe(['search'])
+        ->and($manifest['theme']['supports'])->toBe(['search', 'cookie-banner'])
         ->and($manifest['theme']['screenshot'])->toBe('screenshot.png')
         ->and($manifest['theme']['parent'])->toBeNull();
 });

@@ -30,6 +30,16 @@ return [
     'search_empty_title' => 'No result for “:query”',
     'search_empty_hint' => 'Try a shorter term, or a different spelling.',
 
+    // --- Cookie consent (spec 16 §3.2) ---------------------------------------
+    'cookie_banner_title' => 'Cookies',
+    'cookie_banner_intro' => 'This site uses cookies required for it to work and, with your consent, other cookies for the purposes below. You can change your mind at any time.',
+    'cookie_banner_accept_all' => 'Accept all',
+    'cookie_banner_reject_all' => 'Reject all',
+    'cookie_banner_customize' => 'Customize',
+    'cookie_banner_save' => 'Save my choices',
+    'cookie_banner_always_active' => 'always active',
+    'cookie_banner_manage' => 'Manage cookies',
+
     // --- Home -----------------------------------------------------------------
     'home_hero_body' => 'This site is ready. Publish your first content, then choose what the homepage should show in Settings > Reading.',
     'home_hero_action' => 'Browse the site',

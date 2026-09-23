@@ -22,7 +22,8 @@
             "footer": "Pied de page"
         },
         "supports": [
-            "search"
+            "search",
+            "cookie-banner"
         ]
     }
 }

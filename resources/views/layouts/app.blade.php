@@ -13,7 +13,10 @@
     l'ombre, deux niveaux de surface au plus (§4.5) — quatre disciplines qui
     n'anticipent pas le mode sombre mais évitent de le rendre impossible.
 
-    Pas une ligne de JavaScript côté public (§8.3).
+    Pas une ligne de JavaScript propre côté public (§8.3). La bannière de
+    consentement est un composant du Core, qui ne rend rien — ni bannière, ni
+    script — tant qu'aucun module actif ne déclare de traceur (spec 16 §3.2) ;
+    sa présentation est la surcharge `partials/cookie-banner` (§3.4).
 --}}
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full">
@@ -41,6 +44,8 @@
     </a>
 
     <x-baobab::admin-bar />
+
+    <x-baobab::consent-banner />
 
     @include('theme::partials.header')
 

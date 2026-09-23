@@ -29,6 +29,13 @@
                     {{ __('theme::theme.search') }}
                 </a>
 
+                {{-- Retirer son consentement doit être aussi simple que le donner.
+                     Masqué tant que le script de consentement ne l'a pas révélé :
+                     sans traceur déclaré, ce lien n'existe pas pour le visiteur. --}}
+                <a href="#" class="text-muted underline underline-offset-4" data-baobab-consent-open hidden>
+                    {{ __('theme::theme.cookie_banner_manage') }}
+                </a>
+
                 <span>{{ __('theme::theme.built_with', ['product' => 'Baobab']) }}</span>
             </div>
         </div>
